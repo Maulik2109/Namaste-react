@@ -5,6 +5,7 @@ const heading = React.createElement(
     },
     "Heading 1"
   );
+  const heading3 =React.createElement("h1",{id:"timtle"},"my heading");
   const heading2 = React.createElement(
     "h2",
     {
@@ -17,7 +18,7 @@ const heading = React.createElement(
     {
       id: "container",
     },
-    [heading, heading2]
+    [heading, heading2,heading3]
   );
   console.log(heading);
   const root = ReactDOM.createRoot(document.getElementById("root"));
