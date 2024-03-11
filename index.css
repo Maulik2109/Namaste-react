@@ -29,7 +29,7 @@
     width:100%;
  }
 
- .restarunt-list{
+ .restarunt-list {
    display: flex;
    flex-wrap: wrap;
  }
