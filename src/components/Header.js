@@ -14,7 +14,8 @@ const Title=()=>(
  
         return (
         <div className="header"> 
-         <Title/>
+         <Title></Title>
+        <h1>Mr.Food</h1>
         <div className="nav-items">
           <ul>
             <li>Home</li>

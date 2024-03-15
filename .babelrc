@@ -1,4 +1,5 @@
 {
-    "plugins": [ ["transform-remove-console",
-     { "exclude": [ "error", "warn"] }] ]
-}
+    "parserOpts": {
+      "plugins": ["jsx", "flow"]
+    }
+  }
