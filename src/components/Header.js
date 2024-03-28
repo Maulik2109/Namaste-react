@@ -1,3 +1,10 @@
+import { useState } from "react";
+
+const loggedInUser= ()=>{
+  //Api call to authenticate user
+  return false;
+}
+
 const Title=()=>(
 
     <h1 id="title" key="h2">
@@ -12,6 +19,8 @@ const Title=()=>(
 
     const Header= () => {
  
+      const[isLoggedIn,setIsLoggedIn]=useState(false);
+
         return (
         <div className="header"> 
          <Title></Title>
@@ -24,6 +33,11 @@ const Title=()=>(
             <li>Cart</li>
           </ul>
         </div>
+        {
+          isLoggedIn ? (<button onClick={()=>setIsLoggedIn(false)}>Logout</button>
+          ):(
+          <button onClick={()=>setIsLoggedIn(true)}>Login</button>)
+        }
          </div> 
         );
       };
