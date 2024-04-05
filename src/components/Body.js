@@ -21,7 +21,7 @@ const Body=()=>{
   },[]);
 
 async function getRestraunts(){
-  const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.59080&lng=85.13480&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+  const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
   const json= await data.json();
   console.log(json);
   setAllRestraunts(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);

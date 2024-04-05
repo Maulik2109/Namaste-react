@@ -1,4 +1,5 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
 
 const loggedInUser= ()=>{
   //Api call to authenticate user
@@ -12,7 +13,7 @@ const Title=()=>(
        <img 
        className="logo" 
        alt="logo" 
-       src="https://c8.alamy.com/comp/2DDHAKD/restaurant-logo-design-mr-food-fork-and-tie-combination-2DDHAKD.jpg"/>
+       src="https://img.freepik.com/premium-vector/mr-food-logo-design-template-vector_610482-309.jpg"/>
        </a>
       </h1>
     );
@@ -24,12 +25,17 @@ const Title=()=>(
         return (
         <div className="header"> 
          <Title></Title>
-        <h1>Mr.Food</h1>
         <div className="nav-items">
           <ul>
-            <li>Home</li>
-            <li>About us</li>
-            <li>Contact</li>
+            <li>
+            <Link to="/">Home</Link>
+            </li>
+            <li>
+            <Link to="/about"> About us</Link>
+            </li>
+            <li>
+            <Link to="/contact">Contact</Link>
+            </li>
             <li>Cart</li>
           </ul>
         </div>
