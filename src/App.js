@@ -8,6 +8,7 @@ import Error from "./components/Error";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import RestrauntMenu from "./components/RestaruntMenu";
+import Profile from "./components/Profile";
 
    const AppLayout= ()=>{
     return(
@@ -33,6 +34,12 @@ import RestrauntMenu from "./components/RestaruntMenu";
         {
           path:"/about",
           element:<About/>,
+          children:[
+            {
+            path:"profile",
+            element:<Profile/>,
+            },
+          ],
          },
          {
           path:"/contact",

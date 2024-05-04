@@ -42,3 +42,7 @@
    background-color: lightgrey;
    margin:20px;
  }
+
+ .menu {
+   display: flex;
+ }
