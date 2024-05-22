@@ -3,14 +3,8 @@ import RestaruntCard from "./RestaruntCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
-
-function filterdata(searchInput, restarunts){
-  
-  const filterdata= restarunts.filter((restarunt)=>
-   restarunt.info.name.includes(searchInput))
-   return filterdata;
-   
-}
+import { filterdata } from "../utils/helper";
+import useOnline from "../utils/useOnline";
 
 const Body=()=>{
  const [allRestraunts, setAllRestraunts]=useState([]); 
@@ -31,6 +25,9 @@ async function getRestraunts(){
   //console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 }
 
+const isOnline=useOnline();
+
+if(!isOnline) return <h1>offline, check your internet connnection !!</h1>;
 console.log("render");
 
  return allRestraunts.length===0?
